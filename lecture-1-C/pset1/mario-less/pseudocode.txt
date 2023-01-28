@@ -1,0 +1,7 @@
+Problem: write a program that accepts a user input, a positive integer between 1 and 8 inclusive. Return #'s based on user input.
+
+// initialize int height and prompt user for height
+// if height is < 1 or > 8 we go back to user prompt; achieve with do...while loop
+// for loop: iterate from 1 <= 8; i++
+// keep printing #
+// add a new line
