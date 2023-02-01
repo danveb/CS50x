@@ -1,0 +1,15 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+1. Bubble Sort's worst case is O(n^2). In a random sort bubble sort will go through all of elements twice, running at (n^2).
+2. In a reverse sort, bubble sort makes excess swaps.
+
+sort2 uses: Merge Sort
+
+How do you know?:
+1. Merge Sort's worst case is O(n log n), which is faster than Bubble Sort/Selection Sort running in O(n^2). Merge sort uses recursion to break down a large dataset into smaller dataset.
+
+sort3 uses: Selection Sort
+
+How do you know?:
+1. Selection Sort's worst case is O(n^2), just like Bubble Sort.
