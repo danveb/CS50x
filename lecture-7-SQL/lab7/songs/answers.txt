@@ -1,0 +1,7 @@
+1. If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+I would characterize the listener's audio aura to be an accurate reflection of the user. As defined by Spotify, "audio aura" reflects to the user in question, in terms of style of music the user enjoys, the melody and its energy.
+
+2. Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+I would suggest increasing the number of songs the user listens on Spotify to calculate the "audio aura". By having a greater pool of songs it could paint a whole bigger picture.
