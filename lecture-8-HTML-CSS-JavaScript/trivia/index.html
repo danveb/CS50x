@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 id="question1">What is Argentina's most glorious soccer club?</h3>
+                <div>
+                    <button class="option1">Racing Club</button>
+                    <button class="option2">Independiente</button>
+                    <button class="option3">Boca Jrs.</button>
+                    <button class="option4">River Plate</button>
+                    <button class="option5">San Lorenzo</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 id="question2">What does “HTTP” stand for?</h3>
+                <input
+                    id="answerInput"
+                    type="text"
+                    placeholder="Enter answer"
+                    required
+                >
+                <button id="confirmAnswer">Check Answer</button>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Part 1
+            const question1 = document.getElementById("question1");
+            const option1Btn = document.querySelector(".option1");
+            const option2Btn = document.querySelector(".option2");
+            const option3Btn = document.querySelector(".option3");
+            const option4Btn = document.querySelector(".option4");
+            const option5Btn = document.querySelector(".option5");
+
+            function setBtnRed(button) {
+                // set button color to "red" and text to white
+                button.style.background = "red";
+                button.style.color = "white";
+            };
+
+            function setBtnGreen(button) {
+                button.style.background = "green";
+                button.style.color = "white";
+            };
+
+            function addIncorrectText() {
+                // text beneath question1 will say "Incorrect"
+                // create a p tag, set to "Incorrect" and style in red
+                // append pTag to question1 <h3>
+                // include a setTimeout to remove pTag after 1 seconds so it doesn't overlap with other options
+                let pTag = document.createElement("p");
+                pTag.textContent = "Incorrect";
+                pTag.style.color = "red";
+                question1.appendChild(pTag);
+                setTimeout(() => {
+                    question1.removeChild(pTag);
+                }, 1000);
+            };
+
+            function addCorrectText() {
+                let pTag = document.createElement("p");
+                pTag.textContent = "Correct";
+                pTag.style.color = "green";
+                question1.appendChild(pTag);
+            };
+
+            option1Btn.addEventListener("click", () => {
+                setBtnRed(option1Btn);
+                addIncorrectText();
+            });
+
+            option2Btn.addEventListener("click", () => {
+                setBtnRed(option2Btn);
+                addIncorrectText();
+            });
+
+            option3Btn.addEventListener("click", () => {
+                setBtnRed(option3Btn);
+                addIncorrectText();
+            });
+
+            option4Btn.addEventListener("click", () => {
+                setBtnGreen(option4Btn);
+                addCorrectText();
+            });
+
+            option5Btn.addEventListener("click", () => {
+                setBtnRed(option5Btn);
+                addIncorrectText();
+            });
+
+            // Part 2
+            const question2 = document.getElementById("question2");
+            const inputAnswer1 = document.getElementById("answerInput"); // get the value of the input!
+            const buttonToConfirm = document.getElementById("confirmAnswer");
+
+            buttonToConfirm.addEventListener("click", () => {
+                checkAnswer();
+            });
+
+            function checkAnswer() {
+                if(inputAnswer1.value === "HyperText Transfer Protocol") {
+                    inputAnswer1.style.backgroundColor = "green";
+                    inputAnswer1.style.color = "white";
+                    // correctText function
+                    correctText();
+                } else {
+                    inputAnswer1.style.backgroundColor = "red";
+                    inputAnswer1.style.color = "white";
+                    // incorrectText function + setTimeout
+                    incorrectText();
+                };
+            };
+
+            function correctText() {
+                let pTag = document.createElement("p");
+                pTag.textContent = "Correct";
+                pTag.style.color = "green";
+                question2.appendChild(pTag);
+            };
+
+            function incorrectText() {
+                let pTag = document.createElement("p");
+                pTag.textContent = "Correct";
+                pTag.style.color = "green";
+                question2.appendChild(pTag);
+                setTimeout(() => {
+                    question2.removeChild(pTag);
+                }, 1000);
+            };
+
+        </script>
+    </body>
+</html>
