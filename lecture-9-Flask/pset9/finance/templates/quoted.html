@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Quoted
+{% endblock %}
+
+{% block main %}
+
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{ result.symbol }}</th>
+        <td>{{ result.name }}</td>
+        <td>
+          {% set price = result.price %}
+          ${{ '{:,.2f}'.format(price) }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock %}

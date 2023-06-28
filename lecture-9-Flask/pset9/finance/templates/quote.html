@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Quote
+{% endblock %}
+
+{% block main %}
+
+  <form
+    action="/quote"
+    method="post"
+    class="d-flex justify-content-center align-items-center p-2 mb-4"
+  >
+    <div class="d-flex gap-1 form-group">
+      <input
+        class="form-control"
+        type="text"
+        name="symbol"
+        placeholder="Stock symbol: TSLA"
+      >
+      <button
+        class="form-group btn btn-primary"
+        type="submit"
+      >Search</button>
+    </div>
+  </form>
+  {% if error %}
+    <div class="alert alert-warning" role="alert">Symbol {{ result.symbol }} is not valid. Please try again.</div>
+  {% endif %}
+
+{% endblock %}

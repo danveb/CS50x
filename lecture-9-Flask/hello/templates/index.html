@@ -1,0 +1,20 @@
+<!-- we'll extend layout.html and use new code for our body, without repeating html boilerplate; we'll incorporate "block body" and "endblock" to write any html we want -->
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/" method="POST">
+  <input
+    name="name"
+    type="text"
+    autocomplete="off"
+    autofocus
+    placeholder="Enter name"
+  >
+  <button
+    type="submit"
+  >Greet</button>
+</form>
+
+{% endblock %}

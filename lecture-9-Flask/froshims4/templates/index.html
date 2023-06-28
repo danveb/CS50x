@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/register" method="POST">
+  <input
+    type="text"
+    name="name"
+    placeholder="Enter name"
+    autocomplete="off"
+    autofocus
+    required
+  >
+    <!-- use Jinja templating for dynamic sports -->
+    {% for sport in sports %}
+      <input
+        name="sport"
+        type="radio"
+        value="{{ sport }}"
+      >{{ sport }}
+    {% endfor %}
+  <button type="submit">Register</button>
+</form>
+
+{% endblock %}

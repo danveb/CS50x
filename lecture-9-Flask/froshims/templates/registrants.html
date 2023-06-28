@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<ul>
+  <!-- iterate over registrants dictionary with for-in loop -->
+  {% for name in registrants %}
+    <li>{{ name }} is registered for {{ registrants[name] }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
