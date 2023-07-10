@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Sell
+{% endblock %}
+
+{% block main %}
+
+<div class="container-layout">
+  <form
+    action="/sell"
+    method="post"
+    class="d-flex justify-content-center align-items-center p-2 mb-4 py-5"
+  >
+    <div class="d-flex gap-1 form-group">
+      <select name="symbol">
+          <option disabled selected>Coin</option>
+        {% for coin in coins %}
+          <option value="{{ coin.symbol }}" id="{{ coin.id }}">{{ coin.symbol }}</option>
+        {% endfor %}
+      </select>
+      <input
+        class="form-control"
+        type="text"
+        name="shares"
+        placeholder="Number of shares"
+      >
+      <button
+        class="form-group btn btn-danger"
+        type="submit"
+      >Sell</button>
+    </div>
+  </form>
+  {% if error %}
+    <div class="alert alert-warning" role="alert">Sorry, you don't have enough shares to sell this stock.</div>
+  {% endif %}
+</div>
+
+{% endblock %}

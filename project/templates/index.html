@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block main %}
+
+  <div class="container-full container-bg">
+    <div class="container-layout py-5 px-5">
+      {% if session["user_id"] %}
+        <h1 class="mb-3 text-primary">Welcome back to Coini$t</h1>
+        <p class="mb-3 text-info">Go ahead and quote for your favorite crypto coin!</p>
+        <a href="/quote" class="text-success">Go To Quote</a>
+      {% else %}
+        <h1 class="mb-3 text-primary">Welcome to Coini$t</h1>
+        <p class="mb-3 text-info">Coini$t is an application that allows users to quote, buy, sell, view all related to cryptocurrency. Though it's a much simpler approach to a stock-exchange, users at Coini$t are able to make transactions using fiat currency to buy and sell coins at most recently-traded prices. Welcome to Coini$t playground!</p>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

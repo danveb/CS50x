@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Todos
+{% endblock %}
+
+{% block main %}
+
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for transaction in transactions %}
+      <tr>
+        <th scope="row">{{ transaction.symbol }}</th>
+        <td>{{ transaction.shares }}</td>
+
+        <td>${{ transaction.price }}</td>
+        <td>
+          {% set total = transaction.price * transaction.shares %}
+          {% if total < 0 %}
+            -${{ '{:,.2f}'.format(-total) }}
+          {% else %}
+            ${{ '{:,.2f}'.format(total) }}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <td></td>
+        <th scope="1">Cash</th>
+        <th scope="1">{{ cash }}</th>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <th scope="1">Total</th>
+        <th scope="1">$10,000</th>
+      </tr>
+    </tfoot>
+  </table>
+
+{% endblock %}

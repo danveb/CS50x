@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Coin Quoted
+{% endblock %}
+
+{% block main %}
+<div class="container-layout py-5">
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">Coin</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Icon</th>
+        <th scope="col">Market Cap</th>
+        <th scope="col">Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>{{symbol}}</th>
+            <td>{{name}}</td>
+            <td>${{ '{:,.2f}'.format(price) }}</td>
+            <td><img src="{{icon}}" alt="coin icon" class="icon"></td>
+            <td>{{marketCap}} coins</td>
+            <td>#{{rank}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

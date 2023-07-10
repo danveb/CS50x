@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Buy
+{% endblock %}
+
+{% block main %}
+
+<div class="container-layout">
+  <form
+    action="/buy"
+    method="post"
+    class="d-flex justify-content-center align-items-center p-2 mb-4 py-5"
+  >
+    <div class="d-flex gap-1 form-group">
+      <input
+        class="form-control"
+        type="text"
+        name="symbol"
+        placeholder="Coin symbol: BTC"
+      >
+      <input
+        class="form-control"
+        type="text"
+        name="shares"
+        placeholder="Number of shares"
+      >
+      <button
+        class="form-group btn btn-warning"
+        type="submit"
+      >Buy</button>
+    </div>
+  </form>
+  {% if error %}
+    <div class="alert alert-warning" role="alert">Symbol {{ result.symbol }} is not valid. Please try again.</div>
+  {% endif %}
+</div>
+
+{% endblock %}
