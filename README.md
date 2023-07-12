@@ -11,3 +11,7 @@ As of July 2023 here's my certificate of completion for CS50x.
 <h2><a href="https://cs50.harvard.edu/x/2023/honesty/">Academic Honesty</a></h2>
 
 <h2><a href="https://cs50.me/cs50x">Gradebook</a></h2>
+
+<h2><a href="https://cs50.dev">VSCode for CS50</a></h2>
+
+<img src="static/cs50-dev.png">
