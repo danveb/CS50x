@@ -1,9 +1,9 @@
 # Coini$t
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODFleGNpbG9kMjI5eWx3dzBkcHZ2cnFxcDI5ZjZocm4wem5qMDdjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/89AGeiUtM2NHQUaCHR/giphy.gif">
+<img src="static/coini$t.png">
 
 ## The Problem
-Have you ever heard about Bitcoin, Etherium, Dodgecoin, among other coins? Were you ever interested in a single app where you can quote latest coin prices?
+Have you ever heard about Bitcoin, Etherium, Dogecoin, among other coins? Were you ever interested in a single app where you can quote latest coin prices?
 
 ## The Solution
 Coini$t is an all-in-one solution where users can quote, buy, sell, view all related to coins. Though it's a much simpler approach to a stock-exchange, users at Coini$t are able to make transactions using fiat currency to buy and sell coins at most recently-traded prices. Take this as a playground of some sort. This is a project built for Harvard's CS50X course.
